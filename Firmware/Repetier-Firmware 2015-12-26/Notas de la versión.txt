@@ -1,0 +1,26 @@
+Este firmware está basado en la versión 0.92.3
+
+Tiene la corrección de Repetier que se muestra en el foro siguiente hecha maualmente
+
+http://forums.reprap.org/read.php?267,392590,page=2 
+
+Aunque a partir de la versión 0.92.6 esta corrección venía de serie.
+
+Para funcionar con la Zum Mega 3D
+En el archivo pins.h tiene cambiado:
+
+#define ORIG_Z_ENABLE_PIN       77 //62
+
+#define ORIG_FAN_PIN            12 //9
+#define ORIG_PS_ON_PIN          81 //12
+
+#define HEATER_0_PIN       9 //10
+#define HEATER_1_PIN       10 //8
+#define HEATER_2_PIN       8 //9
+
+Una vez que se mete el firmware es necesario cargar los valores de la EEprom importando el archivo
+ EEpromParaImprimir.epr desde Repetier Host.
+ 
+ 1) Conectar la impresora
+ 
+ 2) Menu Configuración\Config firmware EEPROM -----> Import EEPROM
